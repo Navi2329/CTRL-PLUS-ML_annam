@@ -8,8 +8,8 @@ This project aims to classify soil images into one of four categories: Alluvial,
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/Navi2329/CTRL-PLUS-ML.git
-   cd CTRL-PLUS-ML
+   git clone https://github.com/Navi2329/CTRL-PLUS-ML_annam.git
+   cd CTRL-PLUS-ML_annam
    ```
 2. Create a virtual environment and activate it:
    ```bash
@@ -26,10 +26,10 @@ This project aims to classify soil images into one of four categories: Alluvial,
 
 1. Open the project in your preferred code editor.
 2. Run the script or notebook to:
-   * Load and preprocess the dataset
-   * Train the model (EnhancedSOILNet or any other model)
-   * Evaluate model performance (F1-score, classification report)
-   * Generate and save final predictions
+   - Load and preprocess the dataset
+   - Train the model (EnhancedSOILNet or any other model)
+   - Evaluate model performance (F1-score, classification report)
+   - Generate and save final predictions
 
 > If you're using Kaggle, upload the dataset (or use the preloaded dataset) and adjust the dataset path in the notebook accordingly (e.g., `../input/dataset-name/`).
 
@@ -41,8 +41,8 @@ This task involves classifying whether an image is a **soil image or not** using
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/Navi2329/CTRL-PLUS-ML.git
-   cd CTRL-PLUS-ML
+   git clone https://github.com/Navi2329/CTRL-PLUS-ML_annam.git
+   cd CTRL-PLUS-ML_annam
    ```
 2. Create a virtual environment and activate it:
    ```bash
@@ -59,9 +59,9 @@ This task involves classifying whether an image is a **soil image or not** using
 
 1. Open the project in your preferred code editor.
 2. Run the script or notebook to:
-   * Load and preprocess the binary dataset
-   * Train the model using positive soil image data
-   * Predict whether test images are soil or not
+   - Load and preprocess the binary dataset
+   - Train the model using positive soil image data
+   - Predict whether test images are soil or not
 
 > For Kaggle: Upload the dataset (or use the preloaded dataset), and update the paths in the notebook to reflect Kaggle's directory structure (e.g., `../input/dataset-name/`).
 
