@@ -64,9 +64,3 @@ This task involves classifying whether an image is a **soil image or not** using
    - Predict whether test images are soil or not
 
 > For Kaggle: Upload the dataset (or use the preloaded dataset), and update the paths in the notebook to reflect Kaggle's directory structure (e.g., `../input/dataset-name/`).
-
----
-
-Both tasks require well-commented, clear code and strong documentation for final submission. Ensure predictions are saved in the required format and follow competition deadlines strictly.
-
----
