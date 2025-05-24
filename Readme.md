@@ -1,51 +1,72 @@
-Task 1: Soil Type Classification using Machine Learning
+# README.md
 
-This project aims to classify different soil types based on their physicochemical properties using machine learning. Soil classification plays a vital role in modern agriculture, helping farmers and researchers make informed decisions about crop selection, fertilization, and land management.
-The dataset used in this project contains various features like:
+## Task 1: Soil Type Classification (Multiclass)
 
-- pH level
-- Electrical Conductivity (EC)
-- Organic Carbon (OC)
-- Phosphorous (P)
-- Potassium (K)
-- Iron (Fe)
-- Zinc (Zn)
-- Manganese (Mn)
-- Copper (Cu)
-- Soil Type (Target)
+This project aims to classify soil images into one of four categories: Alluvial, Black, Clay, or Red, using deep learning. The model is trained to recognize soil characteristics based on image features such as texture and color. The final score is based on the **minimum F1-score** across all classes, encouraging balanced performance.
 
-Each row in the dataset corresponds to a soil sample with its measured values. The target variable is a categorical label indicating the soil class.
- 
-The dataset is assumed to be a CSV file where each row represents a soil sample, and each column is a specific feature or target class. Before feeding the data into the machine learning model, we perform several preprocessing steps. These include checking for missing values and handling them appropriately, encoding categorical target variables using label encoding, and scaling the feature values using standardization techniques. The dataset is then split into training and testing subsets using an 80/20 or 70/30 ratio to evaluate the model’s generalization capabilities.
+### Setup Instructions
 
-The Random Forest Classifier is chosen for this project due to its robustness, accuracy, and ability to handle both categorical and numerical data. It is an ensemble learning method that builds multiple decision trees and combines their predictions to provide a stable and accurate classification. Once the model is trained, it is evaluated using various performance metrics including accuracy score, confusion matrix, and a full classification report that covers precision, recall, and F1-score for each class. Additionally, we visualize the feature importances to understand which soil attributes most significantly influence the model’s predictions.
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Navi2329/CTRL-PLUS-ML.git
+   cd CTRL-PLUS-ML
+   ```
+2. Create a virtual environment and activate it:
+   ```bash
+   python -m venv env
+   source env/bin/activate  # For Linux/Mac
+   env\Scripts\activate     # For Windows
+   ```
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Several Python libraries are utilized in this project. Pandas is used for data manipulation and cleaning; NumPy supports numerical computations; Matplotlib and Seaborn are employed for creating informative visualizations; Scikit-learn (sklearn) is used for preprocessing, model training, and evaluation; Joblib is used to save and load the trained model; and Warnings is used to suppress unnecessary output during runtime. Together, these libraries provide a powerful and flexible environment for building and evaluating machine learning models.
+### Running Instructions
 
-Setup instruction:
+1. Open the project in your preferred code editor.
+2. Run the script or notebook to:
+   * Load and preprocess the dataset
+   * Train the model (EnhancedSOILNet or any other model)
+   * Evaluate model performance (F1-score, classification report)
+   * Generate and save final predictions
 
-To run this project locally, follow these step-by-step instructions. First, clone the repository or download the project files into a working directory. Then, create a virtual environment using the command python -m venv env and activate it using source env/bin/activate for Linux/Mac or env\Scripts\activate for Windows. Next, install the required dependencies by running pip install -r requirements.txt. Once the environment is set up, launch Jupyter Notebook by typing jupyter notebook in your terminal or command prompt. Open the soil-type-classification.ipynb file and execute each cell in order to preprocess the data, train the model, and evaluate its performance. Make sure the dataset file (CSV) is in the same directory or modify the notebook path to match the location of your dataset.After training, you can save the model using joblib.dump() and later load it with joblib.load() for prediction on new data. The notebook includes visualizations such as the confusion matrix and feature importance bar plots to give you deeper insights into model performance and decision logic.
+> If you're using Kaggle, upload the dataset (or use the preloaded dataset) and adjust the dataset path in the notebook accordingly (e.g., `../input/dataset-name/`).
 
-Instructions to run
+## Task 2: Soil Image Binary Classification (One-Class)
 
-1.Load the Dataset:
-	Ensure your dataset (CSV file) is in the same directory or update the path 	accordingly in the notebook.
+This task involves classifying whether an image is a **soil image or not** using binary classification. You can use a pre-trained model like ResNet as a feature extractor and fine-tune it for one-class classification based on soil images.
 
-2.Run Preprocessing Cells:
-	Handle missing values.
-	Encode the target column.
-	Scale features if required.
+### Setup Instructions
 
-3.Model Training:
-	Train a RandomForestClassifier using the training data.
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Navi2329/CTRL-PLUS-ML.git
+   cd CTRL-PLUS-ML
+   ```
+2. Create a virtual environment and activate it:
+   ```bash
+   python -m venv env
+   source env/bin/activate  # For Linux/Mac
+   env\Scripts\activate     # For Windows
+   ```
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-4.Evaluation:
-	Evaluate the model using accuracy score, confusion matrix, and classification 	report.
+### Running Instructions
 
-5.Model Saving:
-	Save the trained model using joblib.dump() for later use.
+1. Open the project in your preferred code editor.
+2. Run the script or notebook to:
+   * Load and preprocess the binary dataset
+   * Train the model using positive soil image data
+   * Predict whether test images are soil or not
 
-Task 2: Soil Type Part 2
+> For Kaggle: Upload the dataset (or use the preloaded dataset), and update the paths in the notebook to reflect Kaggle's directory structure (e.g., `../input/dataset-name/`).
 
-This project focuses on the classification of soil types using machine learning, specifically employing a Support Vector Machine (SVM) classifier to predict soil category based on physicochemical features. Soil classification plays a crucial role in agriculture and environmental management, helping experts and farmers determine crop suitability and soil health. The dataset used in this notebook contains key soil features such as pH, electrical conductivity (EC), organic carbon (OC), and the concentration of essential nutrients like phosphorus (P), potassium (K), iron (Fe), zinc (Zn), manganese (Mn), and copper (Cu). These inputs are commonly tested in agricultural labs and serve as indicators for determining soil fertility and classification. The machine learning workflow in the notebook follows a structured pipeline starting with data preprocessing, where missing values are handled (if any), and label encoding is applied to transform categorical labels into numerical format suitable for model training. Feature scaling is performed using StandardScaler to normalize the feature range, which is essential for distance-based classifiers like SVM. The data is then split into training and testing sets using an 80-20 ratio. The SVM model, implemented using sklearn.svm.SVC, is trained on the scaled features and evaluated using accuracy, confusion matrix, and classification report (which includes precision, recall, and F1-score). These metrics provide a clear understanding of the model's effectiveness in identifying various soil types. The entire process is executed within a Jupyter Notebook environment, making it easy to visualize outputs and iterate over results. Visualizations are created using Matplotlib and Seaborn to display distributions and confusion matrices, adding to the model’s interpretability. The final trained model can be saved using joblib and reused for future predictions without retraining. To run this project locally, you must first clone or download the repository, then set up a virtual environment (recommended) using Python’s venv module. Once activated, install dependencies listed in requirements.txt using pip install -r requirements.txt. The notebook can then be opened using jupyter notebook, and all cells should be executed sequentially for proper flow. Make sure the dataset (if external) is located in the same directory and the correct filename is used in pd.read_csv(). The primary libraries used in this project include pandas for data manipulation, numpy for numerical computation, matplotlib and seaborn for plotting, scikit-learn for all machine learning-related tasks, and joblib for model persistence.
+---
 
+Both tasks require well-commented, clear code and strong documentation for final submission. Ensure predictions are saved in the required format and follow competition deadlines strictly.
+
+---
