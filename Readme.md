@@ -23,9 +23,11 @@ The Random Forest Classifier is chosen for this project due to its robustness, a
 Several Python libraries are utilized in this project. Pandas is used for data manipulation and cleaning; NumPy supports numerical computations; Matplotlib and Seaborn are employed for creating informative visualizations; Scikit-learn (sklearn) is used for preprocessing, model training, and evaluation; Joblib is used to save and load the trained model; and Warnings is used to suppress unnecessary output during runtime. Together, these libraries provide a powerful and flexible environment for building and evaluating machine learning models.
 
 Setup instruction:
+
 To run this project locally, follow these step-by-step instructions. First, clone the repository or download the project files into a working directory. Then, create a virtual environment using the command python -m venv env and activate it using source env/bin/activate for Linux/Mac or env\Scripts\activate for Windows. Next, install the required dependencies by running pip install -r requirements.txt. Once the environment is set up, launch Jupyter Notebook by typing jupyter notebook in your terminal or command prompt. Open the soil-type-classification.ipynb file and execute each cell in order to preprocess the data, train the model, and evaluate its performance. Make sure the dataset file (CSV) is in the same directory or modify the notebook path to match the location of your dataset.After training, you can save the model using joblib.dump() and later load it with joblib.load() for prediction on new data. The notebook includes visualizations such as the confusion matrix and feature importance bar plots to give you deeper insights into model performance and decision logic.
 
 Instructions to run
+
 1.Load the Dataset:
 	Ensure your dataset (CSV file) is in the same directory or update the path 	accordingly in the notebook.
 
