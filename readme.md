@@ -1,6 +1,6 @@
 # README.md
 
-## Task 1: Soil Type Classification (Multiclass)
+## Challenge 1: Soil Type Classification (Multiclass)
 
 This project aims to classify soil images into one of four categories: Alluvial, Black, Clay, or Red, using deep learning. The model is trained to recognize soil characteristics based on image features such as texture and color. The final score is based on the **minimum F1-score** across all classes, encouraging balanced performance.
 
@@ -33,7 +33,7 @@ This project aims to classify soil images into one of four categories: Alluvial,
 
 > If you're using Kaggle, upload the dataset (or use the preloaded dataset) and adjust the dataset path in the notebook accordingly (e.g., `../input/dataset-name/`).
 
-## Task 2: Soil Image Binary Classification (One-Class)
+## Challenge 2: Soil Image Binary Classification (One-Class)
 
 This task involves classifying whether an image is a **soil image or not** using binary classification. You can use a pre-trained model like ResNet as a feature extractor and fine-tune it for one-class classification based on soil images.
 
